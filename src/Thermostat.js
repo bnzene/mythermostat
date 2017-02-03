@@ -1,11 +1,12 @@
-function Thermostat() {
+'use strict';
+
+var Thermostat = function() {
   this.temperature = 20;
   this.powerSavingMode = true;
   this.PSM_ON_MAX_TEMP = 25
   this.PSM_OFF_MAX_TEMP = 32
   this.maxTemp = this.PSM_ON_MAX_TEMP
   this.minTemp = 10
-
 }
 
 Thermostat.prototype.up = function(){
@@ -18,23 +19,28 @@ Thermostat.prototype.down = function () {
 };
 
 Thermostat.prototype.powerSavingModeSwitcher = function () {
-  if (this.powerSavingMode == true) {
-    this.powerSavingMode = false
-    console.log("Power Saving Mode OFF")
-  } else {
-    this.powerSavingMode = true
-    console.log("Power Saving Mode ON")
-  }
+  this.powerSavingMode == true ? (this.powerSavingMode = false, console.log("Power Saving Mode OFF")): (this.powerSavingMode = true, console.log("Power Saving Mode ON"));
 };
 
 Thermostat.prototype.reset = function () {
   this.temperature = 20;
 };
 
-Thermostat.prototype.currentUsage = function () {
-  if (this.temperature < 18) {
-    return 'Low'
-  } else if (this.temperature < 25) {
-    return 'Medium'
-  } else { return 'High' }
+Thermostat.prototype.getTemperature = function () {
+  return this.temperature;
 };
+
+Thermostat.prototype.getPSM = function () {
+  return this.powerSavingMode ? "Power Saving Mode ON" : "Power Saving Mode OFF";
+};
+
+Thermostat.prototype.getCurrentUsage = function () {
+  if (this.temperature < 18 ) {
+    this.usage = 'low'
+  } else if (this.temperature < 25 ) {
+    this.usage = 'medium'
+  } else { this.usage = 'high'}
+  return this.usage
+};
+
+var thermostat = new Thermostat();
