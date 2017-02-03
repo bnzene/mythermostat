@@ -36,11 +36,10 @@ Thermostat.prototype.getPSM = function () {
 
 Thermostat.prototype.getCurrentUsage = function () {
   if (this.temperature < 18 ) {
-    this.usage = 'low'
+    return 'low'
   } else if (this.temperature < 25 ) {
-    this.usage = 'medium'
-  } else { this.usage = 'high'}
-  return this.usage
+    return 'medium'
+  } else { return 'high'}
 };
 
 var thermostat = new Thermostat();

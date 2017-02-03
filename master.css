@@ -18,6 +18,12 @@ button {
   border-width: 0px;
 }
 
+#current-temperature {
+  font-size: 18px;
+  border-style: 1px white solid;
+  border-radius: 25px;
+}
+
 #up {
   background-color: orange;
   padding: 10px;
