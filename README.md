@@ -6,7 +6,7 @@ Exercise - TDD a thermostat operated via the browser (localhost) using JavaScrip
 
 Download the project and unzip, then double click on myThermo.html to open in the browser - you're up and running! Try pressing some buttons.
 
-![Screenshot](https://drive.google.com/file/d/0BzRNYz2BfyU5M19KTGc3WUNYZ28/view)
+<img src="https://dl.dropboxusercontent.com/s/s8rbfjvgvpfs4uj/screenshot.tiff?dl=0" alt="Screenshot" width="500">
 
 By all means play around with the code itself. Presuming, if you have the urge to do this, that you have some knowledge of programming and JavaScript, you probably already have everything you want to use installed. The only real prerequisite is Jasmine (which you likely already have), to write and run tests - for comprehensive installation instructions, have a look at https://github.com/jasmine/jasmine.
 
